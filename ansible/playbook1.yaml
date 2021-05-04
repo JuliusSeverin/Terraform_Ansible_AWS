@@ -1,0 +1,20 @@
+---
+
+-
+  hosts: all
+  strategy: free   
+  become: yes
+
+  tasks:
+  - name: Test kopiowanie
+    copy: 
+      src: test1.txt
+      dest: /home
+
+
+
+# - name: Update hostow
+  #    apt:
+  #      update_cache=yes
+  #      force_apt_get=yes
+  #      cache_valid_time=3600

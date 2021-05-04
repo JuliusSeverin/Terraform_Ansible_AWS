@@ -1,0 +1,22 @@
+# template writes down "ec2name" and "public_ip" 
+${all_hosts}
+
+${controllers}
+%{ for index, public_ip in control_ip ~}
+${control_name[index]} ansible_host=${public_ip}
+%{ endfor ~}
+
+${controllerspriv}
+%{ for index, private_ip in control_priv_ip ~}
+${control_name[index]}${addprivto} ansible_host=${private_ip}
+%{ endfor ~}
+
+${workers}
+%{ for index, public_ip in node_ip ~}
+${node_name[index]} ansible_host=${public_ip}
+%{ endfor ~}
+
+${workerspriv}
+%{ for index, private_ip in node_priv_ip ~}
+${node_name[index]}${addprivto} ansible_host=${private_ip}
+%{ endfor ~}
