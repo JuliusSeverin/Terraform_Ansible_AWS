@@ -9,7 +9,7 @@ output "control_private_ips" {
 }
 
 output "control_priv_ips_string" {
-  description = "Not active.Some working partially tested solution for problems with alb target_id. In main.tf use element(split...)"
+  description = "Some solution for problems with alb target_id. In main.tf use element(split...)"
   value       = join(",", aws_instance.control[*].private_ip)
 }
 

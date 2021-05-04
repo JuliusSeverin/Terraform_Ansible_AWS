@@ -1,3 +1,0 @@
-[all]
-${​​sftp-eiv-name}​​​​​ ansible_host=${​​​​​sftp-eiv-ip}​​​​​ ansible_python_interpreter=/usr/bin/python3 # ${​​​​​sftp-eiv-id}​​​​​
-${​​​​​sftp-markt-name}​​​​​ ansible_host=${​​​​​sftp-markt-ip}​​​​​ ansible_python_interpreter=/usr/bin/python3 # ${​​​​​sftp-markt-id}​​​​​
